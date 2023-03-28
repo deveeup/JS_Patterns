@@ -9,7 +9,7 @@ class SingletonClass {
   static instance = undefined;
 
   constructor(version) {
-    this.version = this.version;
+    this.version = version;
   }
 
   static getInstance(version) {

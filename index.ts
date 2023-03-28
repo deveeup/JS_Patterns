@@ -9,8 +9,8 @@ class SingletonTS {
   private static instance: SingletonTS;
   private version: string;
 
-  private constructor() {
-    this.version = this.version;
+  private constructor(version: string) {
+    this.version = version;
   }
 
   static getInstance(version: string): SingletonTS {
@@ -22,8 +22,8 @@ class SingletonTS {
 }
 
 function appSingletonTS() {
-  const singleton1 = SingletonClass.getInstance('v1');
-  const singleton2 = SingletonClass.getInstance('v2');
+  const singleton1 = SingletonTS.getInstance('v1');
+  const singleton2 = SingletonTS.getInstance('v2');
 
   console.log(singleton1 === singleton2);
 }
